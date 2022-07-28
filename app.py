@@ -67,7 +67,7 @@ def callback_sensor(var, raw_value):
     result = {
         'value': raw_value,
     }
-    if var == SENSOR_TEMPERATURE_EXTRACT or var == SENSOR_TEMPERATURE_EXHAUST or var == SENSOR_TEMPERATURE_OUTDOOR:
+    if var == SENSOR_TEMPERATURE_EXTRACT or var == SENSOR_TEMPERATURE_EXHAUST or var == SENSOR_TEMPERATURE_OUTDOOR or var == SENSOR_TEMPERATURE_SUPPLY:
         result['value'] = raw_value / 10.0
         result['unit'] = "C"
 
