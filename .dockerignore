@@ -1,0 +1,6 @@
+.env*
+.idea
+.ruby-version
+.gitignore
+test.rb
+Dockerfile
