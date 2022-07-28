@@ -180,7 +180,7 @@ def generate_metrics():
     metrics = map(generate_metric, sensors)
     output = "\n".join(metrics)
 
-    return Response(output, mimetype='text/plain; charset=utf-8')
+    return Response(output, mimetype='text/plain')
 
 
 if __name__ == '__main__':
