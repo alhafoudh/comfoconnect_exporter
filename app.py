@@ -171,8 +171,8 @@ def generate_metric(key):
     if result.get('unit', None) is not None:
         extra_labels += ",unit=\"C\""
 
-    return "comfoconnect_%s{bridge_uuid=\"%s\",bridge_ip=\"%s\"%s} %s" % (
-        sensor_names[key], bridge.uuid.hex(), bridge.host, extra_labels, result['value'])
+    return "comfoconnect_%s{bridge_uuid=\"%s\",bridge_ip=\"%s\"%s} %s %s" % (
+        sensor_names[key], bridge.uuid.hex(), bridge.host, extra_labels, result['value'], round(time.time() * 1000))
 
 
 @app.route("/")
